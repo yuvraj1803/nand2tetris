@@ -1,1 +1,2 @@
 *.hdl linguist-detectable=true
+*.scilab linguist-detectable=false
