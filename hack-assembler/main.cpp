@@ -12,7 +12,7 @@ using namespace std;
 
 int main(int argc, char * argv[]){
     if(argc != 2){
-        cout << "input format: hack-assembler <file-name>" << '\n';
+        cout << "input format: ./hack-assembler <file-name>" << '\n';
         exit(1);
     }
     vector<string> args;
