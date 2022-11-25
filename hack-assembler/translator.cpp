@@ -60,12 +60,14 @@ string translator::comp(string &field, int line) {
 }
 
 string translator::dest(string &field, int line) {
-    if(translator::compT.find(field)!=translator::compT.end()) return translator::compT[field];
+    if(field.empty()) return "000";
+    if(translator::destT.find(field)!=translator::destT.end()) return translator::destT[field];
     cout << "error: check line " << line << '\n';
     exit(1);}
 
 string translator::jump(string &field, int line) {
-    if(translator::compT.find(field)!=translator::compT.end()) return translator::compT[field];
+    if(field.empty()) return "000";
+    if(translator::jumpT.find(field)!=translator::jumpT.end()) return translator::jumpT[field];
     cout << "error: check line " << line << '\n';
     exit(1);
 }
