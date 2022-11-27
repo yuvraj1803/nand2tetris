@@ -4,25 +4,15 @@
 
 #include "parser.h"
 
-parser::parser(const std::string& file) {
-    ifstream fileStream(file);
-    if(fileStream.is_open()){
-        string line;
-        while(getline(fileStream, line)){
-            if(line.empty() || line[0] == '\r') continue;
-            line = removeSpaces(line);
-            line = removeComments(line);
-            if(checkEmptyString(line)) continue;
-            if(line.back() == '\r') line.pop_back(); // removing the '\r' from the end of the string
-            code.push_back(line);
-        }
-        fileStream.close();
+void parser::loadFile(string &assembly_file){
+    this->file = assembly_file;
+    ifstream fileStream(assembly_file);
+    if(!fileStream.is_open()) fileError = true;
+    fileStream.close();
+}
 
-        machineCode = parse();
+parser::parser() {
 
-    }else {
-        fileError = true;
-    }
 }
 
 bool parser::checkEmptyString(std::string &line) {
@@ -65,15 +55,28 @@ string parser::integerToBinaryString(int n){
     return bin;
 }
 
-void parser::displayCode() {
+vector<string> parser::displayCode() {
     int lineNr = 0;
     for(const auto& i:code){
         cout << lineNr << ':' << i << '\n';
         lineNr++;
     }
+    return code;
 }
 
 vector<string> parser::parse() {
+
+    ifstream fileStream(file);
+    string line;
+    while(getline(fileStream, line)){
+        if(line.empty() || line[0] == '\r') continue;
+        line = removeSpaces(line);
+        line = removeComments(line);
+        if(checkEmptyString(line)) continue;
+        if(line.back() == '\r') line.pop_back(); // removing the '\r' from the end of the string
+        code.push_back(line);
+    }
+    fileStream.close();
 
     vector<string> binCode;
     symbol_table ST = *new symbol_table();
