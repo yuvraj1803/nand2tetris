@@ -15,20 +15,24 @@ using namespace std;
 
 class parser {
 private:
-    vector<string> parse();
     vector<string> code;
 
+    string file;
     string removeComments(string &line);
     string removeSpaces(string &line);
     string integerToBinaryString(int n);
 
+
     bool checkEmptyString(string &line);
 
 public:
-     explicit parser(const string& file);
+    vector<string> parse();
+    explicit parser();
      bool fileError = false;
      vector<string> machineCode;
-     void displayCode();
+     vector<string> displayCode();
+     void loadFile(string &assembly_file);
+
 
 };
 
