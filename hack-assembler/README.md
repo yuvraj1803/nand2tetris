@@ -7,3 +7,13 @@ The executable file is present in the cmake-build-debug/ directory. After naviga
   Eg: ./hack-assembler add/Add.asm
   
   This creates a .hack file in the same location of your assembly file.
+
+***Update 1***
+
+->I felt the entire project was cluttered and unorganised.
+->An extra layer of abstraction has been added.
+->Hence in this update, the Assembler class has been added which ***internally takes care of the parser, translator and the symbol table***.
+
+-> ***Assembler::Assembler(string &assembly_file)*** => constructor takes in the input file (containing assembly code)
+-> ***Assembler::clean_code*** => assembly code with comments, spaces and new-lines removed.
+-> ***Assembler::machine_code*** => final machine code generated as per the hack machine language specification.
