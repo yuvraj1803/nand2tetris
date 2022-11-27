@@ -2,6 +2,8 @@ The Hack Assembler converts Assembly code to the Hack Machine code.
 
 Components of the assembler: Parser + Translator + Symbol Table
 
+<img width="956" alt="project-diagram" src="https://user-images.githubusercontent.com/37622719/204144355-93e318e6-f4a4-4f1c-9042-5633b4ffc4a4.png">
+
 ***How to run?***
 The executable file is present in the cmake-build-debug/ directory. After navigating to it, type "./hack-assembler <file-name>".
   Eg: ./hack-assembler add/Add.asm
