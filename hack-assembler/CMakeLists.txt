@@ -7,9 +7,11 @@ include_directories(.)
 
 add_executable(hack_assembler
         main.cpp
-        parser.cpp
-        parser.h
-        symbol_table.cpp
-        symbol_table.h
-        translator.cpp
-        translator.h)
+        Parser/parser.cpp
+        Parser/parser.h
+        Symbol_Table/symbol_table.cpp
+        Symbol_Table/symbol_table.h
+        Assembler/Assembler.cpp
+        Assembler/Assembler.h
+        Translator/translator.cpp
+        Translator/translator.h)
