@@ -23,3 +23,12 @@ The executable file is present in the cmake-build-debug/ directory. After naviga
 -> ***Assembler::clean_code*** => assembly code with comments, spaces and new-lines removed.
   
 -> ***Assembler::machine_code*** => final machine code generated as per the hack machine language specification.
+
+  
+  ***Update 2***
+  
+  -> Added all classes into a directory of their own.
+  
+  -> Modified include statements accordingly.
+  
+  -> Updated CMakeLists.txt
