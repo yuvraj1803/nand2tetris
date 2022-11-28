@@ -5,7 +5,7 @@
 #ifndef HACK_ASSEMBLER_ASSEMBLER_H
 #define HACK_ASSEMBLER_ASSEMBLER_H
 
-#include "parser.h"
+#include "Parser/parser.h"
 #include <string>
 
 class Assembler {
