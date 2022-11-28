@@ -2,7 +2,7 @@
 // Created by Yuvraj Sakshith on 25/11/22.
 //
 
-#include "translator.h"
+#include "Translator/translator.h"
 
 translator::translator() {
     translator::destT[""] = "000";
