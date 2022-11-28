@@ -8,8 +8,8 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include "symbol_table.h"
-#include "translator.h"
+#include "Symbol_Table/symbol_table.h"
+#include "Translator/translator.h"
 
 using namespace std;
 
