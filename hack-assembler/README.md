@@ -5,8 +5,11 @@ Components of the assembler: Parser + Translator + Symbol Table
 <img width="956" alt="project-diagram" src="https://user-images.githubusercontent.com/37622719/204144355-93e318e6-f4a4-4f1c-9042-5633b4ffc4a4.png">
 
 ***How to run?***
-The executable file is present in the cmake-build-debug/ directory. After navigating to it, type "./hack-assembler <file-name>".
-  Eg: ./hack-assembler add/Add.asm
+The executable file is present in the cmake-build-debug/ directory. After navigating to it, type "./hack-assembler <flags> <file-name>".
+  Flags supported:
+    -c   :  prints the assembly code without comments, spaces or new-lines.
+    
+  Eg: ./hack-assembler -c add/Add.asm
   
   This creates a .hack file in the same location of your assembly file.
 
@@ -32,3 +35,10 @@ The executable file is present in the cmake-build-debug/ directory. After naviga
   -> Modified include statements accordingly.
   
   -> Updated CMakeLists.txt
+  
+  
+  *** Update 3***
+  
+  -> Fixed a bug where Assembler::clean_code was always empty.
+  
+  -> Flags can be passed while running on a command-line interface.
