@@ -56,11 +56,6 @@ string parser::integerToBinaryString(int n){
 }
 
 vector<string> parser::displayCode() {
-    int lineNr = 0;
-    for(const auto& i:code){
-        cout << lineNr << ':' << i << '\n';
-        lineNr++;
-    }
     return code;
 }
 
