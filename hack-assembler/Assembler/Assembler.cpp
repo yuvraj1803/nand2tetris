@@ -13,7 +13,7 @@ Assembler::Assembler(std::string &assembly_file) {
         return;
     }
 
-    clean_code = HACK_PARSER.displayCode();
     machine_code = HACK_PARSER.parse();
+    clean_code = HACK_PARSER.displayCode();
 
 }
